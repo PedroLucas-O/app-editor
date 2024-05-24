@@ -1,0 +1,62 @@
+<style>
+  .conteiner-image{
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+    border-color: #ffdab9;
+  }
+
+  .conteiner-miniaturas{
+    color: #6f4622;
+    background-color: #ffdab9;
+  }
+
+  .miniatures{
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 8px;
+    border-color: #e6ba92;
+  }
+</style>
+
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Editor de Imagens
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div style="align-items: center; margin-top: 20px;">
+    <img [src]="imagemPrincipal" class="conteiner-image"/>
+  </div>
+</ion-content>
+
+<ion-footer style="background-color: aliceblue;">
+  <ion-row style="justify-content: center;" class="conteiner-miniaturas">
+
+    <ion-col col-3 (click)="aplicarEfeito('mulher1')">
+      <img src="../../assets/img/mulher1.jpg" class="miniatures"/>
+      <ion-row>Original</ion-row>
+    </ion-col>
+
+    <ion-col col-3 (click)="aplicarEfeito('saturacao')">
+      <img src="../../assets/img/saturacao.jpg" class="miniatures"/>
+      <ion-row>Saturação</ion-row>
+    </ion-col>
+
+    <ion-col col-3 (click)="aplicarEfeito('serpia')">
+      <img src="../../assets/img/serpia.jpg" class="miniatures"/>
+      <ion-row>Serpia</ion-row>
+    </ion-col>
+
+    <ion-col col-3 (click)="aplicarEfeito('cinza')">
+      <img src="../../assets/img/cinza.jpg" class="miniatures"/>
+      <ion-row>Cinza</ion-row>
+    </ion-col>
+
+  </ion-row>
+
+  <ion-button (click)="abrirNovaPagina()" expand="block">Ajustes</ion-button>
+</ion-footer> 

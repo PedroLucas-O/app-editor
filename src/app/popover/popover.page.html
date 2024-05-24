@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>popover</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-icon name="contrast-outline">Contraste</ion-icon>
+    <ion-item>
+      <ion-range min="20" max="80" step="2" snaps="true" pin="true"></ion-range>
+    </ion-item>
+
+    <ion-icon name="sunny-outline">Brilho</ion-icon>
+    <ion-item>
+      <ion-range min="20" max="80" step="2" snaps="true" pin="true"></ion-range>
+    </ion-item>
+
+    <ion-icon name="water-outline">Desfoque</ion-icon>
+    <ion-item>
+      <ion-range min="20" max="80" step="2" snaps="true" pin="true"></ion-range>
+    </ion-item>
+
+  </ion-list>
+
+  <ion-button expand="block" (click)="Voltar()" >Voltar</ion-button>
+  
+</ion-content>
